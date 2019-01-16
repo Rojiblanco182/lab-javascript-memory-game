@@ -10,12 +10,12 @@ MemoryGame.prototype.shuffleCards = function () {
   var newCards = [];
   var randomHero = 0;
 
-  while (cards.length > 0) {
-    randomHero = Math.floor(Math.random * cards.length);
-    newCards.push(cards[randomHero]);
-    cards.splice(randomHero, 1);
+  while (this.cards.length > 0) {
+    randomHero = Math.floor(Math.random() * this.cards.length);
+    newCards.push(this.cards[randomHero]);
+    this.cards.splice(randomHero, 1);
   }
-  cards = newCards;
+  this.cards = newCards;
 }
 
 MemoryGame.prototype.checkIfPair = function (firstCard, secondCard) {
